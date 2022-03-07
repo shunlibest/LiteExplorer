@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingTop="2dp"
+    android:paddingBottom="2dp">
+
+    <RelativeLayout
+        android:id="@+id/item_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#424242"
+        android:paddingEnd="16dp">
+
+        <ImageView
+            android:id="@+id/item_icon"
+            android:layout_width="54dp"
+            android:layout_height="54dp"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_folder_vector" />
+
+        <TextView
+            android:id="@+id/item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_icon"
+            android:layout_toEndOf="@+id/item_icon"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:paddingStart="2dp"
+            android:paddingTop="4dp"
+            android:textColor="#EEEEEE"
+            tools:text="Directory" />
+
+        <TextView
+            android:id="@+id/item_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_name"
+            android:layout_toEndOf="@+id/item_icon"
+            android:alpha="0.6"
+            android:paddingStart="2dp"
+            android:textColor="#EEEEEE"
+            android:textSize="12sp"
+            tools:text="1 KB" />
+
+
+        <TextView
+            android:id="@+id/item_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_details"
+            android:layout_alignBottom="@+id/item_details"
+            android:layout_toEndOf="@+id/item_details"
+            android:alpha="0.6"
+            android:gravity="end"
+            android:textColor="#EEEEEE"
+            android:textSize="12sp"
+            tools:text="1.1.1970" />
+    </RelativeLayout>
+</FrameLayout>
